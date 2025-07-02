@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- [HEAD CONTENT UNCHANGED FOR BREVITY] -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashutosh Dwivedi | Data Scientist & GenAI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #0b3d91;
+      --accent: #f9a825;
+      --light: #f4f6f9;
+      --dark: #222;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #fff; color: var(--dark); }
+    nav { position: fixed; top: 0; width: 100%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+    nav ul { display: flex; justify-content: center; padding: 1rem; list-style: none; }
+    nav ul li { margin: 0 20px; }
+    nav a { color: var(--primary); font-weight: 500; text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+    header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, var(--primary), #3a77c7); color: white; text-align: center; padding: 2rem; }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.25rem; max-width: 700px; }
+    .hero-icons { margin-top: 2rem; display: flex; gap: 2rem; }
+    .hero-icons i { font-size: 2rem; animation: float 3s ease-in-out infinite; color: var(--accent); }
+    .hero-icons i:nth-child(2) { animation-delay: 0.4s; }
+    .hero-icons i:nth-child(3) { animation-delay: 0.8s; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    section { padding: 5rem 2rem; max-width: 1000px; margin: auto; }
+    .section-title { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); position: relative; }
+    .section-title::after { content: ''; width: 60px; height: 4px; background: var(--accent); position: absolute; bottom: -10px; left: 0; border-radius: 2px; }
+    .about { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
+    .about img { width: 300px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .about p { flex: 1; font-size: 1.1rem; line-height: 1.6; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .project-card { padding: 1.5rem; border-radius: 10px; background: var(--light); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+    .project-card p { font-size: 0.95rem; color: #444; }
+    .project-card a { display: inline-block; margin-top: 1rem; font-weight: 600; color: var(--primary); }
+    .btn-primary { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--primary); color: white; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .btn-primary:hover { background: #0a2f6f; }
+    .contact-links { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem; }
+    .contact-links a { color: var(--primary); font-weight: 500; }
+    footer { text-align: center; padding: 2rem; background: #f9f9f9; color: #555; margin-top: 4rem; }
+    @media (max-width: 768px) { .about { flex-direction: column; align-items: flex-start; } nav ul { flex-direction: column; gap: 10px; } }
+  </style>
 </head>
 <body>
-  <!-- ===== Navigation ===== -->
-  <nav class="nav">
+  <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -13,76 +57,61 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- ===== Hero ===== -->
-  <header class="hero" id="home">
+  <header>
     <h1>Ashutosh Dwivedi</h1>
-    <p>GenAI Engineer & Data Scientist turning ideas into intelligent, production‑ready solutions.</p>
+    <p>Data Scientist & GenAI Engineer | IISc Alum | Building AI that works in the real world.</p>
     <div class="hero-icons">
-      <i class="fas fa-chart-line icon" aria-label="Time‑series Graph"></i>
-      <i class="fas fa-brain icon" aria-label="Neural Network"></i>
-      <i class="fas fa-square-root-alt icon" aria-label="Mathematics"></i>
+      <i class="fas fa-chart-line"></i>
+      <i class="fas fa-brain"></i>
+      <i class="fas fa-square-root-alt"></i>
     </div>
   </header>
-
-  <!-- ===== About ===== -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <img src="https://source.unsplash.com/collection/181581/600x600" alt="Profile Photo Placeholder"/>
-      <div class="about-text">
-        <p>I'm a hands‑on engineer focused on the intersection of data science and generative AI. Trained at IISc Bangalore, I've built LLM‑powered products that simplify complex workflows and deliver measurable value. I care deeply about responsible AI, clean code, and bridging the gap between research and real‑world impact.</p>
-        <p>Outside of work you’ll likely find me reading about new model architectures, refining prompts, or experimenting with serverless ML pipelines.</p>
-      </div>
+    <div class="about">
+      <img src="https://source.unsplash.com/collection/181581/600x600" alt="Profile Image">
+      <p>I'm a hands-on AI practitioner focused on building scalable, real-world solutions using LLMs, GenAI, and classical machine learning. My background from IISc Bangalore laid the foundation, but it’s the constant experimentation and learning that fuels my growth. I believe in simple, robust systems over hype and in making AI usable—not just impressive.</p>
     </div>
   </section>
-
-  <!-- ===== Projects ===== -->
   <section id="projects">
     <h2 class="section-title">Selected Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Incident Intelligence GenAI System</h3>
-        <p>Domain‑agnostic pipeline that tags unstructured incidents and autocompletes forms using custom prompt chains and vector search.</p>
-        <a href="#" target="_blank">Learn more →</a>
+        <h3>GenAI Incident Classifier</h3>
+        <p>LLM-based incident tagging engine with dynamic description fill, integrated into enterprise workflow.</p>
+        <a href="#">Explore Project →</a>
       </div>
       <div class="project-card">
-        <h3>Context‑Aware RAG Chatbot</h3>
-        <p>Retrieval‑augmented assistant that blends semantic chunking, reranking, and evaluation loops for reliable answers.</p>
-        <a href="#" target="_blank">Learn more →</a>
+        <h3>Context-Aware RAG Assistant</h3>
+        <p>RAG chatbot with chunking, reranking, and structured fallback, deployed on AWS Lambda + Step Functions.</p>
+        <a href="#">Explore Project →</a>
       </div>
       <div class="project-card">
         <h3>Scientific Document QA Engine</h3>
-        <p>LLM + HYDE powered question‑answering tool deployed on AWS Lambda for rapid, low‑cost inference at scale.</p>
-        <a href="#" target="_blank">Learn more →</a>
+        <p>Question answering on long-form PDFs using HYDE prompts and vector search. Cost-efficient and fast.</p>
+        <a href="#">Explore Project →</a>
       </div>
       <div class="project-card">
-        <h3>Demand Forecasting Framework</h3>
-        <p>End-to-end pipeline for demand planning using hybrid deep learning and classical models for optimized inventory.</p>
-        <a href="#" target="_blank">Learn more →</a>
+        <h3>Inventory Demand Forecaster</h3>
+        <p>Embedding-enhanced time series forecaster for grocery SKUs. Reduced wastage and boosted shelf accuracy.</p>
+        <a href="#">Explore Project →</a>
       </div>
     </div>
   </section>
-
-  <!-- ===== Resume ===== -->
-  <section id="resume" style="text-align:center;">
+  <section id="resume" style="text-align:center">
     <h2 class="section-title">Resume</h2>
-    <a href="Ashutosh_Dwivedi_Resume.pdf" class="btn-primary" target="_blank">Download My Resume (PDF)</a>
+    <a href="Ashutosh_Dwivedi_Resume.pdf" class="btn-primary" target="_blank">Download My Resume</a>
   </section>
-
-  <!-- ===== Contact ===== -->
   <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title">Contact</h2>
     <div class="contact-links">
       <a href="mailto:ashutosh.dwivedi456@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/ashutosh-dwivedi-ab526a177/" target="_blank">LinkedIn</a>
       <a href="https://github.com/" target="_blank">GitHub</a>
     </div>
   </section>
-
-  <!-- ===== Footer ===== -->
   <footer>
-    &copy; 2025 Ashutosh Dwivedi — Crafted with minimalism & meaningful details.
+    © 2025 Ashutosh Dwivedi — Crafted with curiosity, code & caffeine.
   </footer>
 </body>
 </html>
