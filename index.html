@@ -4,20 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashutosh Dwivedi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-    body { background: #f4f4f4; color: #333; line-height: 1.6; }
-    header { background: #0b3d91; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { font-size: 2.5em; }
-    header p { font-size: 1.2em; margin-top: 10px; }
-    .section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    .section h2 { color: #0b3d91; border-bottom: 2px solid #ddd; margin-bottom: 20px; }
-    .project { margin-bottom: 20px; }
-    .project a { color: #0b3d91; text-decoration: none; font-weight: bold; }
-    .contact a { display: block; margin-bottom: 8px; color: #0b3d91; }
-    footer { text-align: center; padding: 20px; background: #eee; }
-    .button { display: inline-block; padding: 10px 15px; background: #0b3d91; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #fdfdfd; color: #333; }
+    header {
+      background: linear-gradient(135deg, #0b3d91, #3a77c7);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0b3d91;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #0b3d91;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+    .projects .project {
+      background: #f2f7ff;
+      border-left: 5px solid #0b3d91;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .projects .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .projects .project a {
+      color: #0b3d91;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .resume .button {
+      background: #0b3d91;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .contact a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #0b3d91;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      background: #e8f0fe;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+    }
   </style>
 </head>
 <body>
@@ -26,46 +98,49 @@
     <p>Data Science Consultant | GenAI Engineer | IISc Bangalore Alum</p>
   </header>
 
-  <section class="section">
+  <section class="about">
     <h2>About Me</h2>
-    <p>
-      I’m a Data Science Consultant (Asst. Manager) at Deloitte, with experience in building and deploying GenAI-powered solutions across EHS and Tyre R&D domains. I'm passionate about ML, NLP, and scalable AI systems, with hands-on expertise in AWS, Python, and LLM pipelines.
-    </p>
+    <p>I’m a Data Science Consultant (Asst. Manager) at Deloitte, driving GenAI solutions across EHS and Tyre R&D. With strong foundations in ML, NLP, and cloud-based pipelines, I design LLM-powered tools that make business processes intelligent, efficient, and scalable.</p>
   </section>
 
-  <section class="section">
+  <section class="projects">
     <h2>Projects</h2>
     <div class="project">
-      <p><a href="#">Incident Intelligence GenAI System</a> – LLM-based classification + auto-field fill for EHS incidents.</p>
+      <a href="#">Incident Intelligence GenAI System</a>
+      <p>LLM-based classification and auto-field fill for safety incidents in an enterprise EHS system.</p>
     </div>
     <div class="project">
-      <p><a href="#">RAG Chatbot for EHS</a> – Search past incidents and policy docs using context-aware LLM.</p>
+      <a href="#">RAG Chatbot for EHS</a>
+      <p>Retrieves relevant policies and historical incidents using reranking + GPT + chunked search.</p>
     </div>
     <div class="project">
-      <p><a href="#">Tyre R&D Assistant</a> – RAG solution using HYDE, chunking, Anthropic models on AWS Lambda.</p>
+      <a href="#">Tyre R&D Assistant</a>
+      <p>Document search solution using HYDE prompts, semantic chunking, Titan + Anthropic models.</p>
     </div>
     <div class="project">
-      <p><a href="#">Demand Forecasting at Dunzo</a> – Neural Time Series + embeddings to optimize inventory.</p>
+      <a href="#">Demand Forecasting – Dunzo</a>
+      <p>Time series + embeddings to predict item-level demand for groceries and minimize wastage.</p>
     </div>
     <div class="project">
-      <p><a href="#">Used Car Price Prediction</a> – Linear regression + VIF, backward selection, Random Forest.</p>
+      <a href="#">Used Car Price Prediction</a>
+      <p>Linear regression with backward selection, multicollinearity checks, and random forest comparison.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="resume">
     <h2>Resume</h2>
     <a href="Ashutosh_Dwivedi_Resume.pdf" class="button" target="_blank">Download My Resume (PDF)</a>
   </section>
 
-  <section class="section contact">
+  <section class="contact">
     <h2>Contact</h2>
-    <a href="mailto:ashutosh.dwivedi456@gmail.com">ashutosh.dwivedi456@gmail.com</a>
+    <a href="mailto:ashutosh.dwivedi456@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/ashutosh-dwivedi-ab526a177/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/" target="_blank">GitHub (Add Your Link)</a>
+    <a href="https://github.com/" target="_blank">GitHub (Add Link)</a>
   </section>
 
   <footer>
-    &copy; 2025 Ashutosh Dwivedi. All rights reserved.
+    &copy; 2025 Ashutosh Dwivedi | Built with ❤️ and clean code.
   </footer>
 </body>
 </html>
